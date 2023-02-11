@@ -1,0 +1,33 @@
+[flake8]
+exclude =
+    *.bat,
+    *.json,
+    *.lock,
+    *.md,
+    *.toml,
+    *.yml,
+    .coverage,
+    .dockerignore,
+    .gitignore,
+    .isort.cfg
+    Dockerfile,
+    Makefile,
+    LICENSE,
+    __pycache__/,
+    .idea/,
+    .git/,
+    .pytest_cache/,
+    bin/,
+    build/,
+    dist/,
+    include/,
+    lib/,
+    share/,
+    LICENSES/,
+doctests = True
+max-line-length = {{ cookiecutter.max_line_length }}
+per-file-ignores =
+    __init__.py:
+        F401,
+        F403,
+        F821,

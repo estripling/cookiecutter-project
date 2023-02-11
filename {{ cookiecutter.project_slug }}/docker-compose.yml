@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  jupyterlab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888-8889:8888-8889"
+      - "4040-4043:4040-4043"
+    working_dir: "/home/jovyan/work"
+    volumes:
+      - ./:/home/jovyan/work
