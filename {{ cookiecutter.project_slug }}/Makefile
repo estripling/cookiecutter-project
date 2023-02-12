@@ -8,7 +8,8 @@ POETRY := poetry
 	check \
 	check-style \
 	run-tests \
-	clean
+	clean \
+	remove-local-branches
 
 ## commands
 ##  - help                                 :: print this help
@@ -44,3 +45,7 @@ run-tests:
 clean:
 	$(PYTHON) scripts/cleanup.py
 	@echo ''
+
+##  - remove-local-branches                :: git remove local branches, except main
+remove-local-branches:
+	git -P branch | grep -v "main" | grep -v \* | xargs git branch -D
