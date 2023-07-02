@@ -18,7 +18,7 @@ help: Makefile
 
 ##  - start                                :: start JupyterLab in Docker container
 start:
-	@docker-compose up --build
+	@docker compose up --build
 
 ##  - install                              :: install dependencies with Poetry
 install:

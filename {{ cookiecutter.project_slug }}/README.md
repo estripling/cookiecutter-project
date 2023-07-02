@@ -26,7 +26,7 @@ After the installation:
    - Otherwise:
 
      ```shell
-     docker-compose up --build
+     docker compose up --build
      ```
 
    This will create a Docker container and start JupyterLab inside it.
